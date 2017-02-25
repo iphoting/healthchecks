@@ -1,0 +1,42 @@
+{
+  "name": "healthchecks",
+  "website": "https://github.com/healthchecks/healthchecks",
+  "keywords": ["heroku", "cron", "devops", "python", "monitoring", "cron-jobs"],
+  "image": "heroku/python",
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "mailgun:starter",
+    "scheduler:standard"
+  ],
+  "scripts": {
+    "postdeploy": "python manage.py migrate"
+  },
+  "env": {
+    "SITE_ROOT": {
+      "description": "Used to build fully qualified URLs for pings, and for use in emails and notifications. Enter your App Name defined above here.",
+      "value": "https://appname.herokuapp.com"
+    },
+    "PING_ROOT": {
+      "description": "Used to build fully qualified URLs for pings. Will fall-back to SITE_ROOT above if undefined.",
+      "required": false
+    },
+    "SITE_NAME": {
+      "description": "Used throughout the templates.",
+      "value": "My Monitoring Project"
+    },
+    "FROM_EMAIL": {
+      "description": "Email from address.",
+      "value": "noreply@example.com"
+    },
+    "PING_EMAIL_DOMAIN": {
+      "description": "Email domain used to received email pings.",
+      "value": "example.com"
+    },
+    "SECRET_KEY": {
+      "generator": "secret"
+    },
+    "ON_HEROKU": {
+      "value": "yes"
+    }
+  }
+}

@@ -232,5 +232,7 @@ LINENOTIFY_CLIENT_SECRET = os.getenv("LINENOTIFY_CLIENT_SECRET")
 
 if os.path.exists(os.path.join(BASE_DIR, "hc/local_settings.py")):
     from .local_settings import *
+elif ('ON_HEROKU' in os.environ or 'DYNO' in os.environ or 'STACK' in os.environ) and os.path.exists(os.path.join(BASE_DIR, "hc/heroku_settings.py")):
+    from .heroku_settings import *
 else:
     warnings.warn("local_settings.py not found, using defaults")
