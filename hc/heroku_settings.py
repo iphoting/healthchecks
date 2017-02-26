@@ -6,6 +6,25 @@ SITE_NAME = os.getenv('SITE_NAME', "My Monitoring Project")
 DEFAULT_FROM_EMAIL = os.getenv('FROM_EMAIL', "noreply@my-monitoring-project.com")
 PING_ENDPOINT = os.getenv('PING_ROOT', SITE_ROOT) + "/ping/"
 PING_EMAIL_DOMAIN = os.getenv('PING_EMAIL_DOMAIN', "example.com")
+REGISTRATION_OPEN = os.getenv('REGISTRATION_OPEN', True)
+
+# Discord integration -- override these via env
+DISCORD_CLIENT_ID = os.getenv('DISCORD_CLIENT_ID', None)
+DISCORD_CLIENT_SECRET = os.getenv('DISCORD_CLIENT_SECRET', None)
+
+# Slack integration -- override these via env
+SLACK_CLIENT_ID = os.getenv('SLACK_CLIENT_ID', None)
+SLACK_CLIENT_SECRET = os.getenv('SLACK_CLIENT_SECRET', None)
+
+# Pushover integration -- override these via env
+PUSHOVER_API_TOKEN = os.getenv('PUSHOVER_API_TOKEN', None)
+PUSHOVER_SUBSCRIPTION_URL = os.getenv('PUSHOVER_SUBSCRIPTION_URL', None)
+PUSHOVER_EMERGENCY_RETRY_DELAY = os.getenv('PUSHOVER_EMERGENCY_RETRY_DELAY', 300)
+PUSHOVER_EMERGENCY_EXPIRATION = os.getenv('PUSHOVER_EMERGENCY_EXPIRATION', 86400)
+
+# Pushbullet integration -- override these via env
+PUSHBULLET_CLIENT_ID = os.getenv('PUSHBULLET_CLIENT_ID', None)
+PUSHBULLET_CLIENT_SECRET = os.getenv('PUSHBULLET_CLIENT_SECRET', None)
 
 import herokuify
 from herokuify.common import *
