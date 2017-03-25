@@ -35,27 +35,19 @@ TWILIO_ACCOUNT = os.getenv('TWILIO_ACCOUNT', None)
 TWILIO_AUTH = os.getenv('TWILIO_AUTH', None)
 TWILIO_FROM = os.getenv('TWILIO_FROM', None)
 
-import herokuify
-from herokuify.common import *
-from herokuify.mail.mailgun import *
-
-DATABASES = herokuify.get_db_config()
+ANYMAIL = {}
+ANYMAIL["MAILGUN_API_KEY"] = os.getenv('MAILGUN_API_KEY', None)
+ANYMAIL["MAILGUN_SENDER_DOMAIN"] = os.getenv('MAILGUN_DOMAIN', None)
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 
 DEBUG = False
-SECRET_KEY = os.getenv('SECRET_KEY', "---")
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
-if os.environ['FORCE_HTTPS'] == "on":
+if os.getenv('FORCE_HTTPS', "off") == "on":
     SECURE_SSL_REDIRECT = True
 else:
     SECURE_SSL_REDIRECT = False
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 import sys
 LOGGING = {
