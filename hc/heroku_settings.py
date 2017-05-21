@@ -26,6 +26,10 @@ PUSHOVER_EMERGENCY_EXPIRATION = os.getenv('PUSHOVER_EMERGENCY_EXPIRATION', 86400
 PUSHBULLET_CLIENT_ID = os.getenv('PUSHBULLET_CLIENT_ID', None)
 PUSHBULLET_CLIENT_SECRET = os.getenv('PUSHBULLET_CLIENT_SECRET', None)
 
+# Telegram integration -- override these via env
+TELEGRAM_BOT_NAME = os.getenv('TELEGRAM_BOT_NAME', None)
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN', None)
+
 import herokuify
 from herokuify.common import *
 from herokuify.mail.mailgun import *
