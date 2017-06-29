@@ -38,6 +38,8 @@ The site should now be running at `https://appname.herokuapp.com/`.
 
 2. Refer to [Sending Status Notifications](#sending-status-notifications) and [Database Cleanup](#database-cleanup) sections for tasks that are required to be scheduled via [Heroku's Scheduler add-on](https://devcenter.heroku.com/articles/scheduler#scheduling-jobs): `$ heroku addons:open scheduler`.
 
+3. [Optional] However, if cost is not an issue, you can choose to run the `sendalerts` task as a background worker: `$ heroku ps:scale sendalerts=1`. (Note: Heroku charges background workers by the second. See <https://www.heroku.com/pricing>.)
+
 ## Setting Up for Development
 
 These are instructions for setting up healthchecks Django app
