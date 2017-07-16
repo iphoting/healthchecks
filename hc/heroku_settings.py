@@ -30,6 +30,11 @@ PUSHBULLET_CLIENT_SECRET = os.getenv('PUSHBULLET_CLIENT_SECRET', None)
 TELEGRAM_BOT_NAME = os.getenv('TELEGRAM_BOT_NAME', None)
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN', None)
 
+# SMS (Twilio) integration -- override in local_settings.py
+TWILIO_ACCOUNT = os.getenv('TWILIO_ACCOUNT', None)
+TWILIO_AUTH = os.getenv('TWILIO_AUTH', None)
+TWILIO_FROM = os.getenv('TWILIO_FROM', None)
+
 import herokuify
 from herokuify.common import *
 from herokuify.mail.mailgun import *
