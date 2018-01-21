@@ -26,7 +26,9 @@ The building blocks are:
 
 ## Deploying to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Click the following button to deploy to Heroku:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/iphoting/healthchecks/tree/heroku)
 
 Upon successful deploy via the Heroku Button, the [Postgresql](https://elements.heroku.com/addons/heroku-postgresql), [Mailgun](https://elements.heroku.com/addons/mailgun), and [Scheduler](https://elements.heroku.com/addons/scheduler) add-ons will be provisioned and configured for use. The initial database migration task will also be run.
 
