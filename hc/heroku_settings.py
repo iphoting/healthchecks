@@ -47,6 +47,11 @@ SECRET_KEY = os.getenv('SECRET_KEY', "---")
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+if os.environ['FORCE_HTTPS'] == "on":
+    SECURE_SSL_REDIRECT = True
+else:
+    SECURE_SSL_REDIRECT = False
+
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 

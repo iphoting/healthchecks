@@ -37,6 +37,10 @@
     },
     "ON_HEROKU": {
       "value": "yes"
-    }
+    },
+	"FORCE_HTTPS": {
+	  "description": "Force redirect to HTTPS. (on/off)",
+	  "value": "on"
+	}
   }
 }
