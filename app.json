@@ -16,15 +16,19 @@
       "description": "Used to build fully qualified URLs for pings, and for use in emails and notifications. Enter your App Name defined above here.",
       "value": "https://appname.herokuapp.com"
     },
-    "PING_ROOT": {
-      "description": "Used to build fully qualified URLs for pings. Will fall-back to SITE_ROOT above if undefined.",
+    "PING_ENDPOINT": {
+      "description": "Used to build fully qualified URLs for pings. Will fall-back to SITE_ROOT/ping/ above if undefined.",
       "required": false
     },
     "SITE_NAME": {
       "description": "Used throughout the templates.",
       "value": "My Monitoring Project"
     },
-    "FROM_EMAIL": {
+    "MASTER_BADGE_LABEL": {
+      "description": "Used throughout the templates.",
+      "value": "MyMon"
+    },
+    "DEFAULT_FROM_EMAIL": {
       "description": "Email from address.",
       "value": "noreply@example.com"
     },
@@ -37,6 +41,12 @@
     },
     "ON_HEROKU": {
       "value": "yes"
+    },
+    "DEBUG": {
+      "value": "False"
+    },
+    "REGISTRATION_OPEN": {
+      "value": "False"
     },
 	"FORCE_HTTPS": {
 	  "description": "Force redirect to HTTPS. (on/off)",
