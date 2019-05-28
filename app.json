@@ -48,9 +48,12 @@
     "REGISTRATION_OPEN": {
       "value": "False"
     },
-	"FORCE_HTTPS": {
-	  "description": "Force redirect to HTTPS. (on/off)",
-	  "value": "on"
-	}
+    "EMAIL_USE_VERIFICATION": {
+      "value": "True"
+    },
+  	"FORCE_HTTPS": {
+  	  "description": "Force redirect to HTTPS. (on/off)",
+  	  "value": "on"
+  	}
   }
 }
