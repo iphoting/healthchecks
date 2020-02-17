@@ -32,9 +32,16 @@
       "description": "Email from address.",
       "value": "noreply@example.com"
     },
+    "SUPPORT_EMAIL": {
+      "required": false
+    },
     "PING_EMAIL_DOMAIN": {
       "description": "Email domain used to received email pings.",
       "value": "example.com"
+    },
+    "PING_BODY_LIMIT": {
+      "description": "In bytes. Set to `None` to always log full request body.",
+      "value": "10000"
     },
     "SECRET_KEY": {
       "generator": "secret"

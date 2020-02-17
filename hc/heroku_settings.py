@@ -1,8 +1,6 @@
 import os
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-REGISTRATION_OPEN = os.getenv('REGISTRATION_OPEN', True)
-
 ANYMAIL = {}
 ANYMAIL["MAILGUN_API_KEY"] = os.getenv('MAILGUN_API_KEY', None)
 ANYMAIL["MAILGUN_SENDER_DOMAIN"] = os.getenv('MAILGUN_DOMAIN', None)
