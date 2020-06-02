@@ -17,12 +17,13 @@ pip install -U -r requirements-dev.txt
 
 echo "Updating project packages..."
 pip-compile --upgrade --generate-hashes
+pip-compile --upgrade --generate-hashes requirements-dev.in
 pipenv lock
 
 echo "Syncing venv with latest project packages..."
 # workaround -lssl errors on macos venv when building psycopg2
 export LDFLAGS="-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"
-pip-sync ; pip install -r requirements-dev.txt
+pip-sync  requirements.txt requirements-dev.txt
 
 ## test
 echo "Starting webserver..."
