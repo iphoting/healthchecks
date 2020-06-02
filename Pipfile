@@ -17,3 +17,10 @@ gunicorn = "*"
 django-heroku = "*"
 django-anymail = "*"
 statsd = "~=3.3.0"
+
+[dev-packages]
+virtualenvwrapper = "*"
+pip-tools = "*"
+pipenv = "*"
+honcho = "*"
+pre-commit = "*"
