@@ -81,9 +81,9 @@ dj-database-url==0.5.0 \
     --hash=sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163 \
     --hash=sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9 \
     # via django-heroku
-django-anymail==7.2 \
-    --hash=sha256:2b71c10d7e735b23da92be2d35afa47eb05e7e16c9a377086426bc4e71c138e9 \
-    --hash=sha256:3a58dc174f75b89b524adb1173391d8069b3bc77d87bfbba378e86158749eee0 \
+django-anymail==7.2.1 \
+    --hash=sha256:7fadf9781573b30af5bb6ca2f39b345c4ca2547723ce677c3025292d0a309a96 \
+    --hash=sha256:dc5d835049a5dbf738a0f4bd793c4655cd53ba455e2ead275845bc158d48cc63 \
     # via -r requirements.in
 django-appconf==1.0.4 \
     --hash=sha256:1b1d0e1069c843ebe8ae5aa48ec52403b1440402b320c3e3a206a0907e97bb06 \
