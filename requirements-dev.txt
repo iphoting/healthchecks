@@ -11,7 +11,7 @@ click==7.1.2              # via pip-tools
 distlib==0.3.1            # via virtualenv
 filelock==3.0.12          # via virtualenv
 honcho==1.0.1             # via -r requirements-dev.in
-identify==1.5.0           # via pre-commit
+identify==1.5.3           # via pre-commit
 nodeenv==1.5.0            # via pre-commit
 pbr==5.5.0                # via stevedore
 pip-tools==5.3.1          # via -r requirements-dev.in
@@ -19,7 +19,7 @@ pipenv==2020.8.13         # via -r requirements-dev.in
 pre-commit==2.7.1         # via -r requirements-dev.in
 pyyaml==5.3.1             # via pre-commit
 six==1.15.0               # via -c requirements.txt, pip-tools, virtualenv
-stevedore==3.2.1          # via virtualenvwrapper
+stevedore==3.2.2          # via virtualenvwrapper
 toml==0.10.1              # via pre-commit
 virtualenv-clone==0.5.4   # via pipenv, virtualenvwrapper
 virtualenv==20.0.31       # via pipenv, pre-commit, virtualenvwrapper

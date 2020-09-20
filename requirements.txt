@@ -12,7 +12,7 @@ cron-descriptor==1.2.24   # via -r requirements.in
 croniter==0.3.31          # via -r requirements.in
 cryptography==3.3.1       # via fido2
 dj-database-url==0.5.0    # via django-heroku
-django-anymail==7.2.1     # via -r requirements.in
+django-anymail==8.0       # via -r requirements.in
 django-appconf==1.0.4     # via django-compressor
 django-compressor==2.4    # via -r requirements.in
 django-heroku==0.3.1      # via -r requirements.in
