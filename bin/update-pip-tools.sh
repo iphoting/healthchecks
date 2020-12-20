@@ -12,7 +12,7 @@ if ! workon ${VENV:-healthchecks-heroku}; then
 fi
 
 echo "Updating venv dev packages..."
-pip install -U pip
+pip install -U "pip<20.3"
 pip install -U -r requirements-dev.txt
 
 echo "Updating project packages..."
@@ -20,7 +20,7 @@ pip-compile --upgrade
 pip-compile --upgrade requirements-dev.in
 #pip-compile --upgrade --generate-hashes
 #pip-compile --upgrade --generate-hashes requirements-dev.in
-#pip-compile --upgrade requirements-tests.in
+pip-compile --upgrade requirements-tests.in
 pipenv lock
 
 echo "Syncing venv with latest project packages..."
