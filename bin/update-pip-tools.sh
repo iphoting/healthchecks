@@ -12,7 +12,7 @@ if ! workon ${VENV:-healthchecks-heroku}; then
 fi
 
 echo "Updating venv dev packages..."
-pip install -U "pip<20.3"
+pip install -U pip
 pip install -U -r requirements-dev.txt
 
 echo "Updating project packages..."

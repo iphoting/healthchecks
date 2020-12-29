@@ -1,6 +1,4 @@
 -c requirements.txt
-braintree
-coveralls 
-mock
-reportlab
+coveralls
+coverage
 apprise
